@@ -58,7 +58,7 @@ To keep code repetition to a minimum, we've used Handlebars.js as the templating
 **Please note that this is an HTML template only. It does not connect to a database, and will not automatically work in a content management system (Wordpress etc). You will need to incorporate our code into your application.**
 
 
-## Template Key Feature
+## Template Key Features
 
 * Chart.js integration with 3 different chart types
 * Built with Bootstrap 5
