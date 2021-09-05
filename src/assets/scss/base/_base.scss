@@ -1,0 +1,60 @@
+/* Custom font import */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&display=swap');
+
+
+/* generic site wide styles*/
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+*:focus,
+*:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: calc(var(--theme-navbar-height) + 1.5rem);
+    width: calc(100% - var(--theme-sidebar-width));
+    margin-left: var(--theme-sidebar-width);
+    overflow-x: hidden;
+}
+
+#main > .container-fluid {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-self: stretch;
+}
+
+.disable-child-pointer * {
+    pointer-events: none;
+}
+
+/* handle menu close/open */
+.menu-collapsed {
+
+    #main {
+        width: calc(100% - var(--theme-sidebar-closed-width));
+        margin-left: var(--theme-sidebar-closed-width);
+    }
+}
+
+/* handle menu hide/show for smaller screens */
+.menu-hidden {
+    #main {
+        width: auto;
+        margin-left: auto;
+    }
+}
+
+/* handle aside transitions */
+.has-transition {
+    #main {
+        transition: all ease-in .1s;
+    }
+}

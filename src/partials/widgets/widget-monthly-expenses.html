@@ -1,0 +1,50 @@
+<div class="card mb-4 h-100">
+    <div class="card-header justify-content-between align-items-center d-flex">
+        <h6 class="card-title m-0">Monthly expenses</h6>
+        <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
+                id="dropdownExpenses" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-more-2-line"></i>
+            </button>
+            <ul class="dropdown-menu dropdown" aria-labelledby="dropdownExpenses">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="chart chart-lg">
+            <canvas id="chartMonthlyExpenses"></canvas>
+        </div>
+
+        <div class="row g-1 mt-4">
+
+            <div class="col-12 col-sm-4 d-flex flex-column align-items-center">
+                <p class="fw-bolder mb-1">$1,456</p>
+                <div class="d-flex align-items-center">
+                    <span class="f-w-2 f-h-2 bg-secondary-faded d-block rounded-circle me-2"></span>
+                    <span class="small text-muted">Rent</span>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-4 d-flex flex-column align-items-center">
+                <p class="fw-bolder mb-1">$12,325</p>
+                <div class="d-flex align-items-center">
+                    <span class="f-w-2 f-h-2 bg-primary d-block rounded-circle me-2"></span>
+                    <span class="small text-muted">Salaries</span>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-4 d-flex flex-column align-items-center">
+                <p class="fw-bolder mb-1">$14,899</p>
+                <div class="d-flex align-items-center">
+                    <span class="f-w-2 f-h-2 bg-info d-block rounded-circle me-2"></span>
+                    <span class="small text-muted">Marketing</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="btn btn-light d-table mx-auto mt-4">View full expenses</a>
+    </div>
+</div>

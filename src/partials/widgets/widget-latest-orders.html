@@ -1,0 +1,67 @@
+{{#if (config orders)}}
+<div class="card mb-4 h-100">
+    <div class="card-header justify-content-between align-items-center d-flex">
+        <h6 class="card-title m-0">Latest orders</h6>
+        <a href="#" class="btn btn-outline-secondary btn-sm">Export</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table m-0 table-striped">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Billing Name</th>
+                        <th>Date</th>
+                        <th>Payment Method</th>
+                        <th>Items</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each orders.entries }}
+                    <tr>
+                        <td>
+                            <span class="fw-bolder">{{ id }}</span>
+                        </td>
+                        <td class="text-muted">{{ billing }}</td>
+                        <td class="text-muted">{{ date }}</td>
+                        <td class="text-muted">
+                            <div class="d-flex align-items-center">
+                                <i class="{{ payment-type }} ri-lg me-2"></i> {{ payment }}
+                            </div>
+                        </td>
+                        <td class="text-muted">5</td>
+                        <th class="text-muted">$123.99</th>
+                        <td><span class="badge rounded-pill bg-{{ status-class }}-faded text-{{ status-class }}">{{ status }}</span></td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
+                                    id="dropdownOrder-{{ @index }}" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-2-line"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown" aria-labelledby="dropdownOrder-{{ @index }}">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>    
+        <nav>
+            <ul class="pagination justify-content-end mt-3 mb-0">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+    </div>
+</div>
+{{/if}}

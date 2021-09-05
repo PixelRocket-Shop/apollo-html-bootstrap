@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> (config config.partials.head) title=config.defaultPageTitle }}
+
+<body class="{{ config.classes.body }}">
+
+    <!-- Navbar-->
+    {{> (config config.partials.navbar)
+        configClassList=config.classes.navbar
+        classList=""
+    }}
+    <!-- / Navbar-->
+
+    <!-- Page Content -->
+    <main id="main">
+
+        <!-- Content-->
+        <section class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            {{> content/breadcrumbs}}
+            <!-- / Breadcrumbs-->
+
+            <!-- Top Row Widgets-->
+            <div class="row g-4">
+
+                <!-- Number Orders Widget-->
+                <div class="col-12 col-md-6 col-xxl-3">
+                    {{> widgets/widget-number-orders }}
+                </div>
+                <!-- / Number Orders Widget-->
+
+                <!-- Average Orders Widget-->
+                <div class="col-12 col-md-6 col-xxl-3">
+                    {{> widgets/widget-average-orders }}
+                </div>
+                <!-- / Average Orders Widget-->
+
+                <!-- Pageviews Widget-->
+                <div class="col-12 col-md-6 col-xxl-3">
+                    {{> widgets/widget-pageviews }}
+                </div>
+                <!-- / Pageviews Widget-->
+
+                <!-- Number Refunds Widget-->
+                <div class="col-12 col-md-6 col-xxl-3">
+                    {{> widgets/widget-number-refunds }}
+                </div>
+                <!-- / Number Refunds Widget-->
+
+            </div>
+            <!-- / Top Row Widgets-->
+
+            <!-- Middle Row Widgets-->
+            <div class="row g-4 mb-4 mt-0">
+
+                <!-- Monthly Expenses-->
+                <div class="col-12 col-lg-4">
+                    {{> widgets/widget-monthly-expenses }}
+                </div>
+                <!-- /Monthly Expenses-->
+
+                <!-- Yearly Income-->
+                <div class="col-12 col-lg-8">
+                    {{> widgets/widget-yearly-income }}
+                </div>
+                <!-- Yearly Income-->
+
+                <!-- Latest Orders-->
+                <div class="col-12">
+                    {{> widgets/widget-latest-orders }}
+                </div>
+                <!-- Latest Orders-->
+
+            </div>
+            <!-- / Middle Row Widgets-->
+
+            <!-- Bottom Row Widgets-->
+            <div class="row g-4 mb-5">
+
+                <!-- Top Products-->
+                <div class="col-12 col-lg-6">
+                    {{> widgets/widget-top-products }}
+                </div>
+                <!-- Top Products-->
+
+                <!-- Newsletter Stats-->
+                <div class="col-12 col-lg-6">
+                    {{> widgets/widgets-newsletter-stats }}
+                </div>
+                <!-- Newsletter Stats-->
+
+            </div>
+            <!-- / Bottom Row Widgets-->
+
+            <!-- Footer -->
+            {{> (config config.partials.footer)
+            configClassList=config.classes.footer
+            classList=""
+        }}
+            <!-- / Footer-->
+
+        </section>
+        <!-- / Content-->
+
+    </main>
+    <!-- /Page Content -->
+
+    <!-- Page Aside-->
+    {{> aside/aside }}
+    <!-- / Page Aside-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+
+</body>
+
+</html>
