@@ -5,7 +5,7 @@ Apollo is the perfect template to make your administration system a breeze to na
 
 <strong><a href="https://apollo-html-bootstrap.vercel.app/">View Demo</a> | <a href="https://github.com/PixelRocket-Shop/apollo-html-bootstrap/archive/main.zip">Download ZIP</a></strong>
 
-![Bootstrap 5 Responsive HTML Fashion Store Template](https://pixelrocket-public-assets.s3.eu-west-2.amazonaws.com/github-assets/apollo-html/homepage "Apollo | Responsive Bootstrap 5 Ecommerce Template")
+![Bootstrap 5 Responsive HTML Fashion Store Template](https://pixelrocket-public-assets.s3.eu-west-2.amazonaws.com/github-assets/apollo-html/homepage.png "Apollo | Responsive Bootstrap 5 Ecommerce Template")
 
 ## Table of contents
 
