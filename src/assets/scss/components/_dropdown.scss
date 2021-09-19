@@ -1,5 +1,6 @@
 .dropdown-menu {
     box-shadow: $box-shadow-lg;
+    border-radius: $border-radius-xl;
 
     li {
         margin-bottom: $dropdown-divider-margin-y;
@@ -29,7 +30,7 @@
 }
 
 .dropdown-lg {
-    min-width: 17rem;
+    min-width: 25rem;
 }
 
 .dropdown > .btn.dropdown-toggle-icon {

@@ -1,13 +1,13 @@
 :root {
     /* Bootstrap vars */
-    --bs-font-sans-serif: 'Jost', sans-serif;
+    --bs-font-sans-serif: 'Inter', sans-serif;
     --bs-spacer: #{$spacer};
     --bs-gutter-width: #{$grid-gutter-width};
 
     /* Theme vars */
-    --theme-font-headings: 'Jost', sans-serif;
+    --theme-font-headings: 'Inter', sans-serif;
     --theme-sidebar-width: 250px;
-    --theme-sidebar-closed-width: 60px;
+    --theme-sidebar-closed-width: 70px;
     --theme-sidebar-transition: all ease-in .1s;
     --theme-sidebar-padding-x: 1.5rem;
     --theme-sidebar-padding-y: 1.5rem;

@@ -4,15 +4,15 @@ import Chart from 'chart.js';
 
 
   // Number of orders chart
-  const chartNumOrders = document.querySelector('#chartNumOrders');
-  if (chartNumOrders) {
-    new Chart(chartNumOrders, {
+  const chartMonthlyIncome = document.querySelector('#chartMonthlyIncome');
+  if (chartMonthlyIncome) {
+    new Chart(chartMonthlyIncome, {
       type: 'line',
       data: {
-        labels: ['1st June', '2nd June', '3rd June', '4th June', '5th June', '6th June', '7th June'],
+        labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
         datasets: [{
-          data: [10, 35, 4, 20, 44, 22, 52],
-          borderColor: '#19b8a2',
+          data: [10, 35, 4, 20, 44, 22, 52, 12, 23, 45, 56, 76, 43, 9, 32, 54, 60, 33, 54, 80],
+          borderColor: '#0049fa',
           fill: false,
           borderWidth: 2,
           pointRadius: 0,
@@ -49,10 +49,10 @@ import Chart from 'chart.js';
       new Chart(chartNumRefunds, {
         type: 'line',
         data: {
-          labels: ['1st June', '2nd June', '3rd June', '4th June', '5th June', '6th June', '7th June'],
+          labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
           datasets: [{
-            data: [10, 35, 4, 20, 44, 22, 52],
-            borderColor: '#19b8a2',
+            data: [10, 35, 4, 20, 44, 22, 52, 12, 23, 45, 56, 76, 43, 9, 32, 54, 60, 33, 54, 80],
+            borderColor: '#0049fa',
             fill: false,
             borderWidth: 2,
             pointRadius: 0,
@@ -89,10 +89,10 @@ import Chart from 'chart.js';
     new Chart(chartAvgOrders, {
       type: 'line',
       data: {
-        labels: ['1 June', '2 June', '3 June', '4 June', '5 June'],
+        labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
         datasets: [{
-          data: [40, 24, 15, 22, 9],
-          borderColor: '#db1a2a',
+          data: [10, 35, 4, 20, 44, 22, 52, 12, 23, 45, 56, 76, 43, 9, 32, 54, 60, 80, 54, 23],
+          borderColor: '#0049fa',
           fill: false,
           borderWidth: 2,
           pointRadius: 0,
@@ -129,10 +129,10 @@ import Chart from 'chart.js';
     new Chart(chartPageviews, {
       type: 'line',
       data: {
-        labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June', '12 June', '13 June', '14 June', '15 June'],
+        labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
         datasets: [{
-          data: [20, 21, 23, 22, 22, 55, 65, 3, 2, 33, 45, 22, 22, 22, 22],
-          borderColor: '#0dcaf0',
+          data: [10, 35, 4, 20, 44, 22, 52, 12, 23, 45, 56, 76, 43, 9, 32, 54, 60, 60, 60, 60],
+          borderColor: '#0049fa',
           fill: false,
           borderWidth: 2,
           pointRadius: 0,
@@ -166,25 +166,34 @@ import Chart from 'chart.js';
     // Yearly Income chart
     const chartYearlyIncome = document.querySelector('#chartYearlyIncome');
     if (chartYearlyIncome) {
+      var ctx = document.getElementById('chartYearlyIncome').getContext("2d")
+      var gradient = ctx.createLinearGradient(0, 0, 0, 230)
+      gradient.addColorStop(0, 'rgba(129,164,248, 0.08)')
+      gradient.addColorStop(1, 'rgba(255,255,255, 0.2)')
       new Chart(chartYearlyIncome, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
           datasets: [{
-            data: [4000, 4500, 4900, 5500, 4500, 4100, 4000, 5000, 5250],
-            backgroundColor: '#794cff',
-            hoverBackgroundColor: '#794cff',
-            borderColor: '#794cff',
-            categoryPercentage: .3,
-            maxBarThickness: '8'
+            data: [4000, 4500, 4900, 5500, 4500, 4100, 4000, 3000, 5250],
+            borderColor: '#0049fa',
+            backgroundColor: gradient,
+            // backgroundColor: 'rgba(129,164,248, 0.2)',
+            pointRadius: 6,
+            pointBackgroundColor: 'rgba(255,255,255,1)',
+            pointBorderWidth: 3,
+            pointHoverRadius: 6,
+            pointHoverBorderWidth: 3,
+            borderWidth: 2,
           },
           {
-            data: [4500, 4300, 4820, 4040, 4690, 3900, 4000, 5000, 4000],
-            backgroundColor: '#e3ebf6',
-            hoverBackgroundColor: '#e3ebf6',
+            data: [2500, 5700, 2820, 4040, 5690, 2900, 2500, 5000, 4000],
             borderColor: '#e3ebf6',
-            categoryPercentage: .3,
-            maxBarThickness: '8'
+            borderWidth: 2,
+            fill: false,
+            pointRadius: 0,
+            pointHoverRadius: 0,
+            borderDash: [8,8]
           }]
         },
         options: {
@@ -205,14 +214,16 @@ import Chart from 'chart.js';
               gridLines: {
                 color: '#e3ebf6',
                 drawBorder: false,
-                zeroLineColor: '#e3ebf6'
+                zeroLineColor: '#e3ebf6',
+                borderDash: [8, 4],
+                zeroLineBorderDash: [8,4]
               },
               ticks: {
                 beginAtZero: true,
                 stepSize: 1000,
                 fontSize: 12,
                 fontColor: '#64748b',
-                fontFamily: 'Open Sans, sans-serif',
+                fontFamily: 'Inter, sans-serif',
                 padding: 10
               }
             }],
@@ -224,7 +235,7 @@ import Chart from 'chart.js';
               ticks: {
                 fontSize: 12,
                 fontColor: "#64748b",
-                fontFamily: "Open Sans, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 padding: 5
               }
             }]
@@ -242,7 +253,7 @@ import Chart from 'chart.js';
               labels: ['USD', 'USD', 'USD'],
               datasets: [{
                 data: [45, 25, 30],
-                backgroundColor: ['#794cff', '#0dcaf0', '#e3ebf6'],
+                backgroundColor: ['#0049fa', '#0dcaf0', '#e3ebf6'],
                 borderWidth: 10,
                 hoverBorderColor: '#fff'
               }]

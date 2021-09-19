@@ -89,6 +89,16 @@ $utilities: map-merge(
         responsive: true
       ),
     ),
+    /* font weights - add black option */
+    "font-weight": (property: font-weight,
+    class: fw,
+    values: (light: $font-weight-light,
+      lighter: $font-weight-lighter,
+      normal: $font-weight-normal,
+      bold: $font-weight-bold,
+      bolder: $font-weight-bolder,
+      black: 800,
+      medium: 500)),
     /* Amend position util */
     "position": map-merge(
       map-get($utilities, "position"),

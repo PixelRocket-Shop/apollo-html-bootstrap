@@ -17,15 +17,137 @@
 
                     <!-- Dashboard Menu Section-->
                     <li class="menu-section mt-2">Menu</li>
-                    <li class="menu-item"><a class="d-flex align-items-center" href="{{webRoot}}/index.html"><i
-                                class="ri-dashboard-line me-3"></i> <span class="menu-link">Dashboard</span></a></li>
+                    <li class="menu-item"><a class="d-flex align-items-center" href="{{webRoot}}/index.html">
+                            <span class="menu-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="w-100">
+                                    <rect fill-opacity=".5" fill="currentColor" x="3" y="3" width="7" height="7"></rect>
+                                    <rect fill="currentColor" x="14" y="3" width="7" height="7"></rect>
+                                    <rect fill-opacity=".5" fill="currentColor" x="14" y="14" width="7" height="7">
+                                    </rect>
+                                    <rect fill="currentColor" x="3" y="14" width="7" height="7"></rect>
+                                </svg>
+                            </span>
+                            <span class="menu-link d-flex justify-content-between align-items-center w-100">
+                                Dashboard
+                                <span class="badge bg-danger-faded text-danger pb-1">beta</span>
+                            </span></a></li>
                     <!-- / Dashboard Menu Section-->
 
+                    <!-- Dashboard Menu Section-->
+                    <li class="menu-section mt-4">Data</li>
+                    <li class="menu-item"><a class="d-flex align-items-center" href="{{webRoot}}/charts.html">
+                            <span class="menu-icon">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 489.902 489.902" style="enable-background:new 0 0 489.902 489.902;">
+                                   <path fill="currentColor" opacity="0.5" d="M349.2,178.251l113.6-45.9c-37.7-72.7-110.1-124-195.6-131.8v122.5C301.8,129.651,330.9,149.851,349.2,178.251z"/>
+                                   <path fill="currentColor" opacity="0.75" d="M121.3,244.751c0-60.7,43.6-110.8,101.1-121.3V0.551C98,11.851,0,116.851,0,244.751c0,54.8,17.9,105.4,48.2,146.2
+                                       l91.4-81.7C128.3,290.251,121.3,268.051,121.3,244.751z"/>
+                                   <path fill="currentColor" d="M479.5,173.551l-113.6,45.9c1.6,8.2,2.7,16.3,2.7,24.9c0,68.1-55.2,123.7-123.7,123.7c-28.4,0-54.8-9.7-75.4-26.1
+                                       l-91.4,81.7c43.9,40.8,102.3,65.7,166.8,65.7c135.3,0,245-109.7,245-245C490,219.851,486.1,196.151,479.5,173.551z"/>
+                           
+                           </svg>
+                            </span>
+                            <span class="menu-link d-flex justify-content-between align-items-center w-100">
+                                Charts
+                                <span class="badge bg-secondary-faded text-secondary pb-1">new</span>
+                            </span></a></li>
+                    <!-- / Dashboard Menu Section-->
+
+                    <!-- Pages Menu Section-->
+                    <li class="menu-section mt-4">Pages</li>
+                    <li class="menu-item"><a class="d-flex align-items-center collapsed" href="#"
+                            data-bs-toggle="collapse" data-bs-target="#collapseMenuItemPages" aria-expanded="false"
+                            aria-controls="collapseMenuItemPages">
+                            <span class="menu-icon">
+                                <svg enable-background="new 0 0 520 520" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg"><g><path fill="currentColor" d="m481.734 100.063h-158.331l-43.111-70.397c-2.727-4.452-7.571-7.166-12.792-7.166h-119.235c-21.099 0-38.265 17.166-38.265 38.266v65.51 229.184c0 21.1 17.166 38.266 38.265 38.266h261.735 71.734c21.1 0 38.266-17.166 38.266-38.266v-217.13c0-21.101-17.166-38.267-38.266-38.267z"/><path fill="currentColor" opacity=".5" d="m80 355.459v-229.184h-41.734c-21.1 0-38.266 17.166-38.266 38.266v294.693c0 21.1 17.166 38.266 38.266 38.266h333.469c21.1 0 38.266-17.166 38.266-38.266v-35.51h-261.736c-37.641.001-68.265-30.623-68.265-68.265z"/></g></svg>
+                            </span>
+                            <span
+                                class="menu-link">Pages</span></a>
+                        <div class="collapse" id="collapseMenuItemPages">
+                            <ul class="submenu">
+                                <li><a href="{{webRoot}}/charts.html">Charts</a></li>
+                                <li><a href="{{webRoot}}/login.html">User Listing</a></li>
+                                <li><a href="{{webRoot}}/login.html">User Profile</a></li>
+                                <li><a href="{{webRoot}}/login.html">Projects Listing</a></li>
+                                <li><a href="{{webRoot}}/login.html">Kanban</a></li>
+                                <li><a href="{{webRoot}}/login.html">Login</a></li>
+                                <li><a href="{{webRoot}}/register.html">Register</a></li>
+                                <li><a href="{{webRoot}}/forgot-password.html">Forgot Password</a></li>
+                                <li><a href="{{webRoot}}/404.html">404 Page</a></li>
+                                <li><a href="{{webRoot}}/blank.html">Blank Page</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- / Pages Menu Section-->
+
+                    <!-- Pages Menu Section-->
+                    <li class="menu-section mt-4">User Management</li>
+                    <li class="menu-item"><a class="d-flex align-items-center collapsed" href="#"
+                            data-bs-toggle="collapse" data-bs-target="#collapseMenuItemUsers" aria-expanded="false"
+                            aria-controls="collapseMenuItemUsers">
+                            <span class="menu-icon">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                   <path fill="currentColor" opacity=".5" d="M155.327,57.142c-51.531,0-93.454,44.45-93.454,99.086c0,54.636,41.923,99.086,93.454,99.086s93.455-44.45,93.455-99.086
+                                       C248.782,101.592,206.859,57.142,155.327,57.142z"/>
+                           
+                                   <path fill="currentColor" d="M367.798,71.321c-0.211,0-0.425,0.001-0.636,0.002c-21.626,0.179-41.826,9.31-56.878,25.713
+                                       c-14.788,16.113-22.829,37.37-22.644,59.854c0.186,22.484,8.577,43.605,23.628,59.473c15.17,15.991,35.265,24.773,56.651,24.773
+                                       c0.215,0,0.43-0.001,0.646-0.002c21.626-0.179,41.826-9.311,56.878-25.713c14.788-16.113,22.829-37.37,22.644-59.855
+                                       C447.702,108.972,411.747,71.321,367.798,71.321z"/>
+                           
+                                   <path fill="currentColor" d="M371.74,257.358h-7.76c-36.14,0-69.12,13.74-94.02,36.26c6.23,4.78,12.16,9.99,17.78,15.61
+                                       c16.58,16.58,29.6,35.9,38.7,57.42c8.2,19.38,12.88,39.8,13.97,60.83H512v-29.87C512,320.278,449.08,257.358,371.74,257.358z"/>
+                           
+                                   <path fill="currentColor" opacity=".5" d="M310.35,427.478c-2.83-45.59-25.94-85.69-60.43-111.39c-25.09-18.7-56.21-29.77-89.92-29.77h-9.34
+                                       C67.45,286.319,0,353.768,0,436.978v17.88h310.65v-17.88C310.65,433.788,310.55,430.618,310.35,427.478z"/>
+                           
+                           </svg>
+                            </span>
+                            <span
+                                class="menu-link">Users</span></a>
+                        <div class="collapse" id="collapseMenuItemUsers">
+                            <ul class="submenu">
+                                <li><a href="{{webRoot}}/login.html">User Listing</a></li>
+                                <li><a href="{{webRoot}}/register.html">User Profile</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- / Pages Menu Section-->
+
+                    <!-- Pages Menu Section-->
+                    <li class="menu-section mt-4">Project Management</li>
+                    <li class="menu-item"><a class="d-flex align-items-center collapsed" href="#"
+                            data-bs-toggle="collapse" data-bs-target="#collapseMenuItemProjects" aria-expanded="false"
+                            aria-controls="collapseMenuItemProjects">
+                            <span class="menu-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L4 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.733.99A1.002 1.002 0 0118 6v2a1 1 0 11-2 0v-.277l-.254.145a1 1 0 11-.992-1.736l.23-.132-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.58V12a1 1 0 11-2 0v-1.42l-1.246-.712a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.42l1.246.712a1 1 0 11-.992 1.736l-1.75-1A1 1 0 012 14v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1 1 0 01-.504.868l-1.75 1a1 1 0 11-.992-1.736L16 13.42V12a1 1 0 011-1zm-9.618 5.504a1 1 0 011.364-.372l.254.145V16a1 1 0 112 0v.277l.254-.145a1 1 0 11.992 1.736l-1.735.992a.995.995 0 01-1.022 0l-1.735-.992a1 1 0 01-.372-1.364z" clip-rule="evenodd" />
+                                  </svg>
+                            </span>
+                            <span
+                                class="menu-link">Projects</span></a>
+                        <div class="collapse" id="collapseMenuItemProjects">
+                            <ul class="submenu">
+                                <li><a href="{{webRoot}}/login.html">Projects Listing</a></li>
+                                <li><a href="{{webRoot}}/register.html">Kanban</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- / Pages Menu Section-->
+
                     <!-- UI Kit Menu Section-->
-                    <li class="menu-section mt-5">UI Kit</li>
+                    <li class="menu-section mt-4">UI Kit</li>
                     <li class="menu-item"><a class="d-flex align-items-center collapsed" href="#"
                             data-bs-toggle="collapse" data-bs-target="#collapseMenuItemUI" aria-expanded="false"
-                            aria-controls="collapseMenuItemUI"><i class="ri-pencil-ruler-2-line me-3"></i>
+                            aria-controls="collapseMenuItemUI">
+                            <span class="menu-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
+                                    <path opacity="0.5" d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z" />
+                                  <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z" />
+                                  </svg>
+                            </span>
                             <span class="menu-link">Components</span></a>
                         <div class="collapse" id="collapseMenuItemUI">
                             <ul class="submenu">
@@ -36,45 +158,18 @@
                                 <li><a href="{{webRoot}}/card.html">Card</a></li>
                                 <li><a href="{{webRoot}}/collapse.html">Collapse</a></li>
                                 <li><a href="{{webRoot}}/dropdown.html">Dropdown</a></li>
+                                <li><a href="{{webRoot}}/forms.html">Forms</a></li>
                                 <li><a href="{{webRoot}}/modal.html">Modal</a></li>
                                 <li><a href="{{webRoot}}/offcanvas.html">Offcanvas</a></li>
                                 <li><a href="{{webRoot}}/pagination.html">Pagination</a></li>
                                 <li><a href="{{webRoot}}/popover.html">Popovers</a></li>
                                 <li><a href="{{webRoot}}/progress.html">Progress</a></li>
                                 <li><a href="{{webRoot}}/tooltip.html">Tooltips</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="menu-item"><a class="d-flex align-items-center collapsed" href="#"
-                            data-bs-toggle="collapse" data-bs-target="#collapseMenuItemContent" aria-expanded="false"
-                            aria-controls="collapseMenuItemContent"><i class="ri-file-line me-3"></i>
-                            <span class="menu-link">Content</span></a>
-                        <div class="collapse" id="collapseMenuItemContent">
-                            <ul class="submenu">
                                 <li><a href="{{webRoot}}/tables.html">Tables</a></li>
-                                <li><a href="{{webRoot}}/forms.html">Forms</a></li>
                             </ul>
                         </div>
                     </li>
                     <!-- / UI Kit Menu Section-->
-
-                    <!-- Pages Menu Section-->
-                    <li class="menu-section mt-5">Pages</li>
-                    <li class="menu-item"><a class="d-flex align-items-center collapsed" href="#"
-                            data-bs-toggle="collapse" data-bs-target="#collapseMenuItemPages" aria-expanded="false"
-                            aria-controls="collapseMenuItemPages"><i class="ri-pages-line me-3"></i> <span
-                                class="menu-link">Pages</span></a>
-                        <div class="collapse" id="collapseMenuItemPages">
-                            <ul class="submenu">
-                                <li><a href="{{webRoot}}/login.html">Login</a></li>
-                                <li><a href="{{webRoot}}/register.html">Register</a></li>
-                                <li><a href="{{webRoot}}/forgot-password.html">Forgot Password</a></li>
-                                <li><a href="{{webRoot}}/404.html">404 Page</a></li>
-                                <li><a href="{{webRoot}}/blank.html">Blank Page</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- / Pages Menu Section-->
 
                 </ul>
             </div>

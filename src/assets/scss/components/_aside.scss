@@ -7,12 +7,27 @@
     height: calc(100% - var(--theme-navbar-height));
     padding: var(--theme-sidebar-padding-y) 0;
 
+
+    .menu-icon {
+        width: 1rem;
+        color: $text-muted;
+        margin-right: .5rem;
+    }
+
+    a.active .menu-icon, a[data-bs-toggle=collapse]:not(.collapsed) .menu-icon {
+        color: $primary;
+    }
+
     a {
         text-decoration: none;
         color: $body-color;
 
         &:hover, &.active {
             color: $primary;
+        }
+        &.active {
+            border-left: 3px solid $primary;
+            background: #{lighten($primary, 49%)};
         }
     }
 
@@ -21,8 +36,15 @@
         padding-bottom: .5rem;
     }
 
+    .submenu a {
+        font-size: .825rem;
+        font-weight: 500;
+    }
+
 
     a[data-bs-toggle="collapse"] {
+        border-left: 3px solid transparent;
+
         &:after {
             content: "\EA56";
             margin-left: auto;
@@ -39,6 +61,8 @@
 
         &:not(.collapsed) {
             color: $primary;
+            border-left: 3px solid $primary;
+            background: #{lighten($primary, 49%)};
         }
     }
 
@@ -92,7 +116,8 @@
     }
 
     > a {
-        padding: .5rem var(--theme-sidebar-padding-x);
+        padding: .75rem var(--theme-sidebar-padding-x);
+        border-left: 3px solid transparent;
     }
 }
 
@@ -109,7 +134,8 @@
 }
 
 .menu-link {
-    font-size: .875rem;
+    font-size: .825rem;
+    font-weight: 500;
     font-weight: 500;
 }
 
