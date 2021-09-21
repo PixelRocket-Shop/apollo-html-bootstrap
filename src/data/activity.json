@@ -1,0 +1,29 @@
+{
+   "entries": [{
+      "img": "{{webRoot}}/assets/images/profile-small-7.jpeg",
+      "name": "John Doe",
+      "activity": "Submitted quarterly marketing report for review.",
+      "time" : "5m ago",
+      "files": true
+   },
+   {
+      "img": "{{webRoot}}/assets/images/profile-small-2.jpeg",
+      "name": "Sally Field",
+      "activity": "Marked project status as completed.",
+      "time" : "1h ago"
+   },
+   {
+      "img": "{{webRoot}}/assets/images/profile-small-3.jpeg",
+      "name": "Mark Robinson",
+      "activity": "Created 2 new products in Mens Shoes",
+      "time" : "2h ago",
+      "products": true
+   },
+   {
+      "img": "{{webRoot}}/assets/images/profile-small-4.jpeg",
+      "name": "Jeffrey Way",
+      "activity": "Set user status as 'offline'",
+      "time" : "6h ago"
+   }
+]
+}

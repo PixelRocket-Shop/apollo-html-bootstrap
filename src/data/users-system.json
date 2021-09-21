@@ -1,0 +1,39 @@
+{
+   "entries": [{
+         "logo": "{{webRoot}}/assets/images/logos/logo-17.svg",
+         "system": "MacOS 11 Big Sur",
+         "amount": "144,678",
+         "percentage": "45"
+      },
+      {
+         "logo": "{{webRoot}}/assets/images/logos/logo-18.svg",
+         "system": "Ubuntu",
+         "amount": "132,568",
+         "percentage": "32"
+      },
+      {
+         "logo": "{{webRoot}}/assets/images/logos/logo-19.svg",
+         "system": "Windows 11",
+         "amount": "114,345",
+         "percentage": "23"
+      },
+      {
+         "logo": "{{webRoot}}/assets/images/logos/logo-17.svg",
+         "system": "MacOS 10.14 Mojave",
+         "amount": "98,445",
+         "percentage": "15"
+      },
+      {
+         "logo": "{{webRoot}}/assets/images/logos/logo-17.svg",
+         "system": "MacOS 10.15 Catalina",
+         "amount": "95,987",
+         "percentage": "10"
+      },
+      {
+         "logo": "{{webRoot}}/assets/images/logos/logo-19.svg",
+         "system": "Windows 10",
+         "amount": "77,562",
+         "percentage": "8"
+      }
+   ]
+}

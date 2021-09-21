@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: calc(var(--theme-navbar-height) + 1.5rem);
+    padding-top: var(--theme-navbar-height);
     width: calc(100% - var(--theme-sidebar-width));
     margin-left: var(--theme-sidebar-width);
     overflow-x: hidden;

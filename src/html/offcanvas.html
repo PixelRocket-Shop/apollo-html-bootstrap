@@ -16,12 +16,12 @@
     <!-- Page Content -->
     <main id="main">
 
+        <!-- Breadcrumbs-->
+        {{> breadcrumbs/breadcrumbs page="Offcanvas"}}
+        <!-- / Breadcrumbs-->
+
         <!-- Content-->
         <section class="container-fluid">
-
-            <!-- Breadcrumbs-->
-            {{> content/breadcrumbs page="Offcanvas"}}
-            <!-- / Breadcrumbs-->
 
             <!-- Page Title-->
             <h2 class="fs-4 mb-2">Offcanvas</h2>
@@ -39,8 +39,8 @@
 
                         </div>
                         <div class="card-body">
-                            <a class="btn btn-primary mb-2" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-                                aria-controls="offcanvasExample">
+                            <a class="btn btn-primary mb-2" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                role="button" aria-controls="offcanvasExample">
                                 Link with href
                             </a>
                             <button class="btn btn-primary mb-2" type="button" data-bs-toggle="offcanvas"

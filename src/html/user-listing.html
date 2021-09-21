@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> (config config.partials.head) title=config.defaultPageTitle }}
+
+<body class="{{ config.classes.body }}">
+
+    <!-- Navbar-->
+    {{> (config config.partials.navbar)
+        configClassList=config.classes.navbar
+        classList=""
+    }}
+    <!-- / Navbar-->
+
+    <!-- Page Content -->
+    <main id="main">
+
+        <!-- Breadcrumbs-->
+        {{> breadcrumbs/breadcrumbs page="User Management"}}
+        <!-- / Breadcrumbs-->
+
+        <!-- Content-->
+        <section class="container-fluid">
+        
+        <div class="card mb-4">
+            <div class="card-header justify-content-between align-items-center d-flex">
+                <h6 class="card-title m-0">User Management</h6>
+                <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-more-2-line"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+
+                <!-- User listing Actions-->
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <form class="bg-light rounded px-3 py-1 flex-shrink-0 d-flex align-items-center">
+                        <input class="form-control border-0 bg-transparent px-0 py-2 me-5 fw-bolder" type="search"
+                          placeholder="Search" aria-label="Search">
+                        <button class="btn btn-link p-0 text-muted" type="submit"><i class="ri-search-2-line"></i></button>
+                    </form>
+                    <div class="d-flex justify-content-end">
+                        <a href="#" class="btn btn-outline-secondary btn-sm text-body me-2"><i class="ri-download-fill align-bottom"></i> Export Users</a>
+                        <a class="btn btn-sm btn-primary" href="#"><i class="ri-add-circle-line align-bottom"></i> New User</a>
+                    </div>
+                </div>
+                <!-- /user listing Actions-->
+
+                <!-- User Listing Table-->
+                <div class="table-responsive">
+                    <table class="table m-0 table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="form-group form-check-custom mb-0 flex-shrink-0">
+                                        <input type="checkbox" class="form-check-input" id="filter-{{ @index }}">
+                                    </div>
+                                </th>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Location</th>
+                                <th>Joined</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each users.entries }}
+                            <tr>
+                                <td>
+                                    <div class="form-group form-check-custom mb-0">
+                                        <input type="checkbox" class="form-check-input" id="filter-{{ @index }}">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex justify-content-start align-items-start">
+                                        {{#if image}}
+                                        <div class="avatar avatar-xs me-3 flex-shrink-0">
+                                            <picture>
+                                                <img class="f-w-10 rounded-circle" src="{{ image }}"
+                                                alt="{{ config.defaultImgAlt }}">
+                                            </picture>
+                                        </div>
+                                        {{else}}
+                                            <button class="btn-icon bg-primary-faded text-primary fw-bolder me-3">{{ letter }}</button>
+                                        {{/if}}
+                                        <div>
+                                            <p class="fw-bolder mb-1 d-flex align-items-center lh-1">{{ name}}
+                                                {{#if verified}}
+                                                    <span class="d-block f-w-4 ms-1 lh-1 text-primary">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                {{/if}}
+                                            </p>
+                                            <span class="d-block text-muted">{{ email }}</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>{{ role }}</td>
+                                <td class="text-muted"><i class="ri-map-pin-line align-bottom"></i> {{ location }}</td>
+                                <td class="text-muted">{{ joined }}</td>
+                                <td>
+                                    {{#if online}}
+                                    <div class="d-flex align-items-center">
+                                        <span class="f-w-2 f-h-2 bg-success d-block rounded-circle me-1 fs-xs fw-bolder"></span> <span class="small text-muted">Online</span>
+                                    </div>
+                                    {{else}}
+                                    <div class="d-flex align-items-center">
+                                        <span class="f-w-2 f-h-2 bg-danger d-block rounded-circle me-1 fs-xs fw-bolder"></span> <span class="small text-muted">Offline</span>
+                                    </div>
+                                    {{/if}}
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
+                                            id="dropdownOrder-{{ @index }}" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="ri-more-2-line"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown" aria-labelledby="dropdownOrder-{{ @index }}">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>    
+                <!-- /User Listing Table-->
+                <nav>
+                    <ul class="pagination justify-content-end mt-3 mb-0">
+                      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        {{> (config config.partials.footer)
+            configClassList=config.classes.footer
+            classList=""
+        }}
+        <!-- / Footer-->        
+
+        </section>
+        <!-- / Content-->
+
+    </main>
+    <!-- /Page Content -->
+
+    <!-- Page Aside-->
+    {{> aside/aside }}
+    <!-- / Page Aside-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+
+</body>
+
+</html>

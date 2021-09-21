@@ -1,0 +1,38 @@
+<div class="card mb-4 h-100">
+    <div class="card-header justify-content-between align-items-center d-flex">
+        <h6 class="card-title m-0">Visitors By Country</h6>
+        <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
+                id="dropdownExpenses" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-more-2-line"></i>
+            </button>
+            <ul class="dropdown-menu dropdown" aria-labelledby="dropdownExpenses">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-body">
+        <ul class="list-unstyled m-0">
+            {{#if (config users-country)}}
+                {{#each users-country.entries}}
+                    <li class="d-flex justify-content-between py-2">
+                        <div class="d-flex align-items-center">
+                            <span class="flag-icon {{ flag }} me-2"></span>
+                            <span class="fw-medium">{{ country }}</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-end">
+                            <span class="text-muted text-end small me-1 d-lg-none d-xxl-block">{{ percentage}}%</span>
+                            {{#if uptrend}}
+                                {{> content/uptrend-icon }}
+                            {{else}}
+                                {{> content/downtrend-icon }}
+                            {{/if}}
+                        </div>
+                    </li>
+                {{/each}}
+            {{/if}}
+        </ul>
+    </div>
+</div>

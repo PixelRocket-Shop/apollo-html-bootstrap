@@ -1,0 +1,93 @@
+<div class="card h-100 bg-primary border-primary">
+    <div class="card-header bg-transparent justify-content-between align-items-center d-flex border-0 pb-0">
+        <div class="d-flex align-items-center flex-shrink-0">
+            <i class="ri-calendar-line me-2 text-white opacity-75 ri-lg"></i>
+            <h6 class="card-title m-0 text-light fs-xs text-uppercase fw-bolder tracking-wide">Upcoming Events</h6>
+        </div>
+        <div class="swiper-announcement-pagination text-end text-white opacity-75 fw-bold fs-9"></div>
+    </div>
+    <div class="card-body mt-3">
+        <div class="d-flex flex-grow-1 overflow-hidden text-white">
+            <!-- Swiper Latest -->
+            <div class="swiper-container overflow-hidden w-auto" data-swiper data-options='{
+                "spaceBetween": 10,
+                "loop": true,
+                "slidesPerView": 1,
+                "observeParents": true,
+                "observer": true,
+                "autoplay": {
+                "delay": 6000,
+                "disableOnInteraction": false
+                },
+                "pagination": {
+                    "el": ".swiper-announcement-pagination",
+                    "clickable": true,
+                    "type": "fraction"
+                }
+            }'>
+                <div class="swiper-wrapper">
+                    {{#if (config events) }}
+                        {{#each events.entries}}
+                            <div class="swiper-slide text-white">
+
+                                <!-- Event Date & Title-->
+                                <div class="d-flex mb-4 align-items-start">
+                                    <div class="me-3 text-center pe-3 border-end-white-opacity">
+                                        <span class="d-block text-uppercase small fw-bolder tracking-wide lh-1">{{ day }}</span>
+                                        <span class="d-block fs-3 text-uppercase fw-bold tracking-wide lh-1 mt-1">{{ date }}</span>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 fs-5 fw-bolder lh-1">{{ title }}</p>
+                                        <small class="d-block lh-1 opacity-75 mt-2">{{ summary }}</small>
+                                    </div>
+                                </div>
+                                <!-- / Event Date & Title-->
+                                
+                                <!-- Event Location-->
+                                <div class="d-flex align-items-start mb-5">
+                                    <button class="btn-icon bg-white opacity-25 me-3"><i class="ri-map-pin-line"></i></button>
+                                    <div>
+                                        <span class="d-block fw-bolder fs-6">{{ location }}</span>
+                                        <small class="d-block opacity-75">{{ address }}</small>
+                                    </div>
+                                </div>
+                                <!-- / Event Location-->
+
+                                <!-- Attendees & CTA-->
+                                <div class="d-flex justify-content-start align-items-start flex-column flex-lg-row justify-content-lg-between">
+                                    <div class="avatar-group me-4">
+                                        <picture class="avatar-group-img">
+                                            <img class="f-w-10 rounded-circle border-primary" src="{{webRoot}}/assets/images/profile-small.jpeg"
+                                            alt="{{ config.defaultImgAlt }}">
+                                        </picture>
+                                        <picture class="avatar-group-img">
+                                            <img class="f-w-10 rounded-circle border-primary" src="{{webRoot}}/assets/images/profile-small-2.jpeg"
+                                            alt="{{ config.defaultImgAlt }}">
+                                        </picture>
+                                        <picture class="avatar-group-img">
+                                            <img class="f-w-10 rounded-circle border-primary" src="{{webRoot}}/assets/images/profile-small-3.jpeg"
+                                            alt="{{ config.defaultImgAlt }}">
+                                        </picture>
+                                        <picture class="avatar-group-img">
+                                            <img class="f-w-10 rounded-circle border-primary" src="{{webRoot}}/assets/images/profile-small-4.jpeg"
+                                            alt="{{ config.defaultImgAlt }}">
+                                        </picture>
+                                        <span class="small fw-bolder ms-2 text-white opacity-90">{{ attending }}</span>
+                                    </div>
+
+                                    <div class="mt-3 mt-lg-0">
+                                        <button class="btn btn-sm btn-white">Attending</button>
+                                        <button class="btn btn-sm btn-link text-white fw-bolder opacity-75">Cancel</button>
+                                    </div>
+                                </div>
+                                <!-- Attendees & CTA-->
+                            </div>
+                        {{/each}}
+                    {{/if}}
+                </div>
+
+            </div>
+            <!-- / Swiper Latest-->
+        </div>
+    </div>
+</div>

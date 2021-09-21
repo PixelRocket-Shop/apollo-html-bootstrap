@@ -12,6 +12,7 @@
         width: 1rem;
         color: $text-muted;
         margin-right: .5rem;
+        line-height: 1;
     }
 
     a.active .menu-icon, a[data-bs-toggle=collapse]:not(.collapsed) .menu-icon {
@@ -25,14 +26,10 @@
         &:hover, &.active {
             color: $primary;
         }
-        &.active {
-            border-left: 3px solid $primary;
-            background: #{lighten($primary, 49%)};
-        }
     }
 
     .submenu {
-        padding-left: 3.5rem;
+        padding-left: 3.25rem;
         padding-bottom: .5rem;
     }
 
@@ -48,6 +45,7 @@
         &:after {
             content: "\EA56";
             margin-left: auto;
+            font-size: 1.15rem;
             margin-right: 0;
             font-family: var(--theme-font-icon);
             font-style: var(--theme-font-icon-style);
@@ -62,7 +60,7 @@
         &:not(.collapsed) {
             color: $primary;
             border-left: 3px solid $primary;
-            background: #{lighten($primary, 49%)};
+            // background: #{lighten($primary, 50.5%)};
         }
     }
 
@@ -145,6 +143,7 @@
 
     .aside {
         width: var(--theme-sidebar-closed-width);
+        z-index: 999;
 
         a[data-bs-toggle=collapse]:after, .menu-link {
             display: none;
@@ -152,6 +151,10 @@
 
         a[data-bs-toggle=collapse]:active {
             pointer-events: none;
+        }
+
+        .menu-icon {
+            margin-right: 0;
         }
 
         .collapse {

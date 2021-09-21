@@ -1,0 +1,77 @@
+{
+   "entries": [{
+         "image": "{{webRoot}}/assets/images/profile-small-4.jpeg",
+         "name": "Jon Smith",
+         "email": "jon@apollo.co.uk",
+         "verified": true,
+         "role": "Administrator",
+         "location": "London, UK",
+         "joined": "24th Jan, 2021",
+         "online": true
+      },
+      {
+         "letter": "A",
+         "name": "Anne Kimber",
+         "email": "anne.kimber@apollo.co.uk",
+         "role": "Sales Leader",
+         "location": "Manchester, UK",
+         "joined": "3rd Apr, 2021"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/profile-small-2.jpeg",
+         "name": "Patrick Patel",
+         "email": "patrick@apollo.co.uk",
+         "verified": true,
+         "role": "IT Support",
+         "location": "New York, US",
+         "joined": "17th Feb, 2021",
+         "online": true
+      },
+      {
+         "image": "{{webRoot}}/assets/images/profile-small-3.jpeg",
+         "name": "Robert Smith",
+         "email": "rob@apollo.co.uk",
+         "verified": true,
+         "role": "Team Leader",
+         "location": "Canberra, AU",
+         "joined": "24th March, 2021",
+         "online": true
+      },
+      {
+         "letter": "B",
+         "name": "Barry Rogan",
+         "email": "barry.rogan@apollo.co.uk",
+         "role": "Sales Support",
+         "location": "London, UK",
+         "joined": "3rd May, 2021"
+      },
+      {
+         "letter": "K",
+         "name": "Karin Frum",
+         "email": "karin.frum@apollo.co.uk",
+         "role": "Customer Support",
+         "location": "Manchester, UK",
+         "joined": "11th Apr, 2021"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/profile-small-5.jpeg",
+         "name": "Onome Sanomi",
+         "email": "onome@apollo.co.uk",
+         "verified": true,
+         "role": "Administrator",
+         "location": "London, UK",
+         "joined": "24th Jan, 2021",
+         "online": true
+      },
+      {
+         "image": "{{webRoot}}/assets/images/profile-small-6.jpeg",
+         "name": "Kevin Smith",
+         "email": "kevin@apollo.co.uk",
+         "verified": true,
+         "role": "Administrator",
+         "location": "London, UK",
+         "joined": "19th Mar, 2021",
+         "online": true
+      }
+   ]
+}

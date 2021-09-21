@@ -1,3 +1,19 @@
 .transition-color {
     transition: color ease-in .2s;
 }
+
+.border-end-white-opacity {
+    border-right: 1px solid rgba(255,255,255, .2) !important;
+}
+
+.border-start-white-opacity {
+    border-left: 1px solid rgba(255,255,255, .2) !important;
+}
+
+.border-top-white-opacity {
+    border-top: 1px solid rgba(255,255,255, .2) !important;
+}
+
+.border-bottom-white-opacity {
+    border-bottom: 1px solid rgba(255,255,255, .2) !important;
+}

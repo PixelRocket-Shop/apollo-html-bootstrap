@@ -7,19 +7,22 @@
 }
 
 .simplebar-track.simplebar-vertical {
-    width: 7px;
+    width: 6px;
 }
 .simplebar-scrollbar {
     opacity: .5;
 }
 .simplebar-wrapper {
-    height: 100vh;
-    padding-right: 1px;
+    height: 170px;
 }
 
 .aside {
     .simplebar-content {
         padding-right: 0 !important;
+    }
+    .simplebar-wrapper {
+        height: 100vh;
+        padding-right: 1px;
     }
 }
 

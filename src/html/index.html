@@ -16,16 +16,21 @@
     <!-- Page Content -->
     <main id="main">
 
+        <!-- Breadcrumbs-->
+        {{> breadcrumbs/breadcrumbs page="Dashboard"}}
+        <!-- / Breadcrumbs-->
+
         <!-- Content-->
         <section class="container-fluid">
 
-            <!-- Breadcrumbs-->
-            {{> content/breadcrumbs}}
-            <!-- / Breadcrumbs-->
+            <!-- Page Title-->
+            <h2 class="fs-3 fw-bold mb-2">Welcome back, Patricia Smith 👋</h2>
+            <p class="text-muted mb-5">Get a quick overview of your company's current status below, or click into one of the sections for a more detailed breakdown.</p>
+            <!-- / Page Title-->
 
             <!-- Top Row Widgets-->
-            <div class="row g-4">
-
+            <div class="row g-4">       
+                
                 <!-- Number Orders Widget-->
                 <div class="col-12 col-sm-6 col-xxl-3">
                     {{> widgets/widget-monthly-income }}
@@ -48,7 +53,20 @@
                 <div class="col-12 col-sm-6 col-xxl-3">
                     {{> widgets/widget-number-refunds }}
                 </div>
-                <!-- / Number Refunds Widget-->
+                <!-- / Number Refunds Widget--> 
+
+
+                <!-- Latest Events-->
+                <div class="col-12 col-md-6">
+                {{> widgets/widget-events }}
+                </div>
+                <!-- /Latest Events-->
+
+                <!-- Refer A Friend-->
+                <div class="col-12 col-md-6">
+                {{> widgets/widget-referfriend }}
+                </div>
+                <!-- /Refer A Friend-->               
 
             </div>
             <!-- / Top Row Widgets-->
@@ -56,14 +74,32 @@
             <!-- Middle Row Widgets-->
             <div class="row g-4 mb-4 mt-0">
 
+                <!-- Current Sales-->
+                <div class="col-12 col-xxl-4">
+                    {{> widgets/widget-sales-current }}                    
+                </div>
+                <!-- / Current Sales-->                 
+
+                <!-- Users By Country-->
+                <div class="col-12 col-lg-6 col-xxl-4">
+                    {{> widgets/widget-users-country }}
+                </div>
+                <!-- / Users By Country-->
+
+                <!-- Users By Operating System-->
+                <div class="col-12 col-lg-6 col-xxl-4">
+                    {{> widgets/widget-users-system }}
+                </div>
+                <!-- / Users By Operating System-->               
+
                 <!-- Monthly Expenses-->
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-4">
                     {{> widgets/widget-monthly-expenses }}
                 </div>
                 <!-- /Monthly Expenses-->
 
                 <!-- Yearly Income-->
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-8">
                     {{> widgets/widget-yearly-income }}
                 </div>
                 <!-- Yearly Income-->

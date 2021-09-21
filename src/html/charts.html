@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> (config config.partials.head) title=config.defaultPageTitle }}
+
+<body class="{{ config.classes.body }}">
+
+    <!-- Navbar-->
+    {{> (config config.partials.navbar)
+        configClassList=config.classes.navbar
+        classList=""
+    }}
+    <!-- / Navbar-->
+
+    <!-- Page Content -->
+    <main id="main">
+
+        <!-- Breadcrumbs-->
+        {{> breadcrumbs/breadcrumbs page="Example Charts"}}
+        <!-- / Breadcrumbs-->
+
+        <!-- Content-->
+        <section class="container-fluid">
+
+            <!-- Page Title-->
+            <h2 class="fs-4 mb-2">Chart Examples</h2>
+            <p class="text-muted mb-4">Our template uses Chart.js for data display. Below are a few common chart
+                examples.</p>
+            <!-- / Page Title-->
+
+            <div class="row g-4">
+
+                <!-- Chart Vertical Bar-->
+                <div class="col-12 col-md-6">
+                    {{> charts/chart-vertical-bar }}
+                </div>
+                <!-- /Chart Vertical Bar-->
+
+                <!-- Chart Stacked Bar-->
+                <div class="col-12 col-md-6">
+                    {{> charts/chart-stacked-bar }}
+                </div>
+                <!-- /Chart Stacked Bar-->
+
+                <!-- Chart Doughnut-->
+                <div class="col-12 col-md-6">
+                    {{> charts/chart-doughnut }}
+                </div>
+                <!-- /Chart Doughnut-->
+
+                <!-- Chart Line-->
+                <div class="col-12 col-md-6">
+                    {{> charts/chart-line }}
+                </div>
+                <!-- /Chart Line-->
+
+                <!-- Chart Pie-->
+                <div class="col-12 col-md-6">
+                    {{> charts/chart-pie }}
+                </div>
+                <!-- /Chart Pie-->               
+
+            </div>
+
+            <!-- Footer -->
+            {{> (config config.partials.footer)
+            configClassList=config.classes.footer
+            classList=""
+        }}
+            <!-- / Footer-->
+
+        </section>
+        <!-- / Content-->
+
+    </main>
+    <!-- /Page Content -->
+
+    <!-- Page Aside-->
+    {{> aside/aside }}
+    <!-- / Page Aside-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+
+</body>
+
+</html>

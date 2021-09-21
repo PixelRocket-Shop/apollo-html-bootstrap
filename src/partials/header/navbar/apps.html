@@ -1,0 +1,39 @@
+<div class="d-none d-sm-flex dropdown mx-1">
+  <button class="btn-action mx-1" type="button" id="appsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="f-w-4 text-muted">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+        <rect x="3" y="3" width="7" height="7"></rect>
+        <rect x="14" y="3" width="7" height="7"></rect>
+        <rect x="14" y="14" width="7" height="7"></rect>
+        <rect x="3" y="14" width="7" height="7"></rect>
+      </svg>
+    </span>
+  </button>
+  <div class="dropdown-menu dropdown-menu-end dropdown-lg" aria-labelledby="appsDropdown">
+    <div class="dropdown-header d-flex justify-content-between align-items-center">
+      <p class="fw-bolder m-0 text-body">My Applications</p>
+    </div>
+    <div class="simplebar-wrapper">
+      <div data-pixr-simplebar>
+        <div class="row g-2 pb-3">
+          {{#if (config logos)}}
+          {{#each logos.entries}}
+            <div class="col-4 h-100">
+              <a href="#" class="d-flex justify-content-center align-items-center flex-column bg-light-hover rounded-2 px-2 py-3 transition-all">
+                <span class="d-block f-h-8">
+                  <picture>
+                    <img class="h-100" src="{{ image }}" alt="{{ config.defaultImgAlt }}">
+                  </picture>
+                </span>
+                <span class="small fw-bolder text-body mb-0 mt-3">{{ name }}</span>
+              </a>
+            </div>
+          {{/each}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    <div><a class="dropdown-item text-primary fw-bolder text-center border-top pt-3" href="#">See more &rarr;</a></div>
+  </div>
+</div>

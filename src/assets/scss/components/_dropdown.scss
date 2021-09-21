@@ -26,12 +26,21 @@
 
 .dropdown-header {
     border-bottom: 1px solid $border-color;
-    margin: 0 -#{$dropdown-padding-x};
+    margin: .75rem -#{$dropdown-padding-x};
+}
+
+.dropdown-sm {
+    min-width: 12rem;
+}
+
+.dropdown-md {
+    min-width: 16rem;
 }
 
 .dropdown-lg {
     min-width: 25rem;
 }
+
 
 .dropdown > .btn.dropdown-toggle-icon {
     color: $text-muted;

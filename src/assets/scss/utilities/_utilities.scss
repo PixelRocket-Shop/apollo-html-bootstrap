@@ -9,10 +9,13 @@
 /* Everything in these files DOES NOT use Bootstrap's API */
 
 /* Animations */
-@import 'animations';
+@import './animations';
+
 /* Backgrounds */
-@import 'backgrounds';
+@import './backgrounds';
+
 /* Misc */
-@import 'misc';
+@import './misc';
+
 /* Text */
-@import 'text';
+@import './text';

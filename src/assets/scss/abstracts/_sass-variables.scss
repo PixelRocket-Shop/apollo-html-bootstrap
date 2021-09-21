@@ -37,10 +37,10 @@ $blue:    #0049fa;
 $indigo:  #6610f2;
 $purple:  #6f46ff;
 $pink:    #ffa69e;
-$red:     #EC008C;
+$red:     #e54370;
 $orange:  #F05A28;
 $yellow:  #ffd500;
-$green:   #3DDC97;
+$green:   #05b89a;
 $teal:    #08c5d5;
 $cyan:    #0dcaf0;
 $facebook-blue: #3b5998;
@@ -66,7 +66,7 @@ $colors: (
 // scss-docs-end colors-map
 
 $primary:       $blue;
-$secondary:     $gray-400;
+$secondary:     $gray-300;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
@@ -435,7 +435,8 @@ $border-color:                $gray-200 !default;
 $border-radius:               .25rem !default;
 $border-radius-sm:            .2rem !default;
 $border-radius-lg:            .3rem !default;
-$border-radius-xl:            20px !default;
+$border-radius-xl:            .85rem !default;
+$border-radius-xxl:           1.5rem !default;
 $border-radius-pill:          50rem !default;
 
 $box-shadow-sm:               0 4px .5rem rgba(29, 48, 61, 0.03) !default;
@@ -479,7 +480,7 @@ $font-family-code:            var(--#{$variable-prefix}font-monospace) !default;
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base effects the font size of the body text
 $font-size-root:              null !default;
-$font-size-base:              .915rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              .9rem !default; // Assumes the browser default, typically `16px`
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
@@ -592,7 +593,7 @@ $mark-bg:                     #fcf8e3 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:        .75rem !default;
+$table-cell-padding-y:        .85rem !default;
 $table-cell-padding-x:        .5rem !default;
 $table-cell-padding-y-sm:     .25rem !default;
 $table-cell-padding-x-sm:     .25rem !default;
@@ -617,10 +618,10 @@ $table-hover-bg-factor:       .075 !default;
 $table-hover-bg:              $gray-200 !default;
 
 $table-border-factor:         .1 !default;
-$table-border-width:          $border-width !default;
+$table-border-width:          0 !default;
 $table-border-color:          $border-color !default;
 
-$table-striped-order:         odd !default;
+$table-striped-order:         even !default;
 
 $table-group-separator-color: currentColor !default;
 
@@ -692,7 +693,7 @@ $btn-font-size-lg:            $input-btn-font-size-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             null !default;
+$btn-font-weight:             500 !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
@@ -775,7 +776,7 @@ $input-height-lg:                       add($input-line-height * 1em, add($input
 $input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 
-$form-check-input-width:                  1em !default;
+$form-check-input-width:                  1.25em !default;
 $form-check-min-height:                   $font-size-base * $line-height-base !default;
 $form-check-padding-start:                $form-check-input-width + .5em !default;
 $form-check-margin-bottom:                .125rem !default;
@@ -785,8 +786,8 @@ $form-check-transition:                   background-color .15s ease-in-out, bac
 
 $form-check-input-active-filter:          brightness(90%) !default;
 
-$form-check-input-bg:                     $gray-200 !default;
-$form-check-input-border:                 $gray-200 !default;
+$form-check-input-bg:                     $gray-300 !default;
+$form-check-input-border:                 $gray-300 !default;
 $form-check-input-border-radius:          .25em !default;
 $form-check-radio-border-radius:          50% !default;
 $form-check-input-focus-border:           $input-focus-border-color !default;
@@ -1012,7 +1013,7 @@ $navbar-dark-brand-hover-color:           $navbar-dark-active-color !default;
 // Dropdown menu container and contents.
 
 $dropdown-min-width:                10rem !default;
-$dropdown-padding-x:                .75rem !default;
+$dropdown-padding-x:                1.5rem !default;
 $dropdown-padding-y:                1rem !default;
 $dropdown-spacer:                   .45rem !default;
 $dropdown-font-size:                .85rem !default;
@@ -1036,7 +1037,7 @@ $dropdown-link-active-bg:           $component-active-bg !default;
 $dropdown-link-disabled-color:      $gray-600 !default;
 
 $dropdown-item-padding-y:           0 !default;
-$dropdown-item-padding-x:           $spacer !default;
+$dropdown-item-padding-x:           0 !default;
 
 $dropdown-header-color:             null !default;
 $dropdown-header-padding:           0 $dropdown-padding-x $dropdown-padding-y !default;
@@ -1424,7 +1425,7 @@ $spinner-border-width-sm: .2em !default;
 
 // Close
 
-$btn-close-width:            1em !default;
+$btn-close-width:            .75em !default;
 $btn-close-height:           $btn-close-width !default;
 $btn-close-padding-x:        .25em !default;
 $btn-close-padding-y:        $btn-close-padding-x !default;

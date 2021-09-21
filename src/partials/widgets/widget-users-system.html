@@ -1,0 +1,41 @@
+<div class="card mb-4 h-100">
+    <div class="card-header justify-content-between align-items-center d-flex">
+        <h6 class="card-title m-0">Users by OS</h6>
+        <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle dropdown-toggle-icon fw-bold p-0" type="button"
+                id="dropdownExpenses" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-more-2-line"></i>
+            </button>
+            <ul class="dropdown-menu dropdown" aria-labelledby="dropdownExpenses">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-body">
+        <ul class="list-unstyled m-0">
+            {{#if (config users-system)}}
+                {{#each users-system.entries}}
+                    <li class="d-flex justify-content-between py-2">
+                        <div class="d-flex align-items-center">
+                            <span class="f-w-4 me-3 lh-1">
+                                <picture>
+                                    <img class="img-fluid" src="{{ logo }}" alt="{{config.defaultImgAlt}}">
+                                </picture>
+                            </span>
+                            <span class="fw-medium">{{ system }}</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-end">
+                            <span class="text-muted text-end small d-lg-none d-xxl-block">{{ amount }}</span>
+                            <div class="progress f-w-12 m-0 ms-2 f-h-1">
+                                <div class="progress-bar" role="progressbar" style="width: {{ percentage}}%" aria-valuenow="{{ percentage}}"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </li>
+                {{/each}}
+            {{/if}}
+        </ul>
+    </div>
+</div>

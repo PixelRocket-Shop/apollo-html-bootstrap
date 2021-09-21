@@ -5,3 +5,48 @@ $value in $theme-colors {
         @include btn-variant-faded(rgba($value, $btn-faded-bg-opacity), $value);
     }
 }
+
+/* action button rounded */
+.btn-action {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 0;
+
+    * {
+        pointer-events: none;
+    }   
+
+    &:hover, &:active, &.show {
+        background: $gray-50;
+    }
+}
+
+.page-loaded .btn-action {
+    transition: background-color ease-in .2s;
+}
+
+.btn-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: transparent;
+
+    * {
+        pointer-events: none;
+    }
+}
+
+.btn-icon-sm {
+    width: 2rem;
+    height: 2rem;
+}

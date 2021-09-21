@@ -1,0 +1,76 @@
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMessage" aria-labelledby="offcanvasMessageLabel">
+    <div class="offcanvas-header position-relative">
+      <div class="d-flex flex-column w-100">
+        <h5 class="offcanvas-title mb-3" id="offcanvasMessageLabel">Company Meetup</h5>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="avatar-group me-4">
+            <picture class="avatar-group-img">
+                <img class="f-w-10 rounded-circle" src="{{webRoot}}/assets/images/profile-small.jpeg"
+                alt="{{ config.defaultImgAlt }}">
+            </picture>
+            <picture class="avatar-group-img">
+                <img class="f-w-10 rounded-circle" src="{{webRoot}}/assets/images/profile-small-2.jpeg"
+                alt="{{ config.defaultImgAlt }}">
+            </picture>
+            <picture class="avatar-group-img">
+                <img class="f-w-10 rounded-circle" src="{{webRoot}}/assets/images/profile-small-3.jpeg"
+                alt="{{ config.defaultImgAlt }}">
+            </picture>
+            <picture class="avatar-group-img">
+                <img class="f-w-10 rounded-circle" src="{{webRoot}}/assets/images/profile-small-4.jpeg"
+                alt="{{ config.defaultImgAlt }}">
+            </picture>
+            <span class="small fw-bolder ms-2 text-muted opacity-90">+ 12 others</span>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle dropdown-toggle-icon p-0" type="button"
+                id="dropdownTop" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-settings-3-line text-muted ri-lg"></i>
+            </button>
+            <ul class="dropdown-menu dropdown" aria-labelledby="dropdownTop">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        </div>
+      </div>
+      <button type="button" class="btn-close text-reset position-absolute top-20 end-5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body h-100 d-flex justify-content-between flex-column pb-0">
+      <div class="overflow-auto py-4">
+        <div class="overflow-hidden">
+          <!-- Messages-->
+          {{> 
+            chat/received 
+            sender="Patrick Johnson"
+            time="2 mins ago"
+            message="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }}
+          {{> 
+            chat/sent 
+            sender="You"
+            time="5 mins ago"
+            message="Maecenas aliquet eu felis vel."
+          }}
+          {{> 
+            chat/received 
+            sender="Patrick Johnson"
+            time="25 mins ago"
+            message="Cras sit amet gravida augue."
+          }}
+          <!-- / Messages-->
+        </div>
+      </div>
+      <div class="border-top p-4 mx-n3">
+        <div class="d-flex flex-column align-items-end">
+          <input type="text" class="form-control d-flex w-100 bg-light border-0 text-muted mb-3" placeholder="Add new message...">
+          <div class="d-flex justify-content-between w-100 align-items-center">
+            <i class="ri-attachment-line text-muted ri-lg"></i>
+            <button class="btn btn-sm btn-primary">Send</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>

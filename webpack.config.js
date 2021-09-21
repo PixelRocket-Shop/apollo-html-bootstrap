@@ -39,6 +39,7 @@ const paths = {
         fonts: './assets/fonts',
         js: './assets/js',
         favicon: './assets/favicon',
+        flags: './assets/flags'
     }
 }
 
@@ -140,6 +141,11 @@ const wPackConfig = {
                     from: paths.src.favicon,
                     to: paths.dist.favicon,
                     noErrorOnMissing: true
+                },
+                {
+                  from: path.resolve(__dirname, 'node_modules/flag-icon-css/flags'),
+                  to: paths.dist.flags,
+                  noErrorOnMissing: true
                 }
             ],
         }),

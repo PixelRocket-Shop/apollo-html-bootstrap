@@ -1,0 +1,39 @@
+{
+   "entries": [{
+         "flag": "flag-icon-gb",
+         "country": "United Kingdom",
+         "uptrend": true,
+         "percentage": "31.2"
+      },
+      {
+         "flag": "flag-icon-us",
+         "country": "United States",
+         "uptrend": false,
+         "percentage": "15.8"
+      },
+      {
+         "flag": "flag-icon-in",
+         "country": "India",
+         "uptrend": true,
+         "percentage": "21.5"
+      },
+      {
+         "flag": "flag-icon-br",
+         "country": "Brazil",
+         "uptrend": false,
+         "percentage": "27.2"
+      },
+      {
+         "flag": "flag-icon-au",
+         "country": "Australia",
+         "uptrend": true,
+         "percentage": "44.8"
+      },
+      {
+         "flag": "flag-icon-ch",
+         "country": "China",
+         "uptrend": true,
+         "percentage": "23.2"
+      }
+   ]
+}

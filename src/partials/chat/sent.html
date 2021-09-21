@@ -1,0 +1,15 @@
+<div class="d-flex align-items-end justify-content-start mb-4 flex-wrap">
+    <div class="d-flex justify-content-end flex-column align-items-end col">
+        <small class="text-muted fs-xs fw-bolder"><span class="fw-bold">{{ sender }}</span> &middot; {{ time }}</small>
+        <div class="bg-primary text-white p-3 mt-2 rounded-t-s-4 rounded-t-e-4 rounded-b-s-4">
+            {{ message }}
+        </div>
+    </div>
+    <div class="avatar avatar-xs ms-3 flex-shrink-0">
+        <picture>
+            <img class="f-w-10 rounded-circle" src="{{webRoot}}/assets/images/profile-small-3.jpeg"
+            alt="{{ config.defaultImgAlt }}">
+        </picture>
+        <span class="avatar-dot bg-success"></span>
+    </div>
+</div>

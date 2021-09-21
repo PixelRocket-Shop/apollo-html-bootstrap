@@ -97,6 +97,7 @@ $utilities: map-merge(
       normal: $font-weight-normal,
       bold: $font-weight-bold,
       bolder: $font-weight-bolder,
+      semibold: 700,
       black: 800,
       medium: 500)),
     /* Amend position util */
@@ -117,6 +118,74 @@ $utilities: map-merge(
         )
       )
     ),
+        /* Amend border radius util */
+        "rounded": (
+          property: border-radius,
+          class: rounded,
+          values: (
+            null: $border-radius,
+            0: 0,
+            1: $border-radius-sm,
+            2: $border-radius,
+            3: $border-radius-lg,
+            4: $border-radius-xl,
+            5: $border-radius-xxl,
+            circle: 50%,
+            pill: $border-radius-pill
+          )
+        ),
+        "rounded-top-start": (
+          property: border-top-left-radius,
+          class: rounded-t-s,
+          values: (
+            null: $border-radius,
+            0: 0,
+            1: $border-radius-sm,
+            2: $border-radius,
+            3: $border-radius-lg,
+            4: $border-radius-xl,
+            5: $border-radius-xxl
+          )
+        ),
+        "rounded-top-end": (
+          property: border-top-right-radius,
+          class: rounded-t-e,
+          values: (
+            null: $border-radius,
+            0: 0,
+            1: $border-radius-sm,
+            2: $border-radius,
+            3: $border-radius-lg,
+            4: $border-radius-xl,
+            5: $border-radius-xxl
+          )
+        ),
+        "rounded-bottom-start": (
+          property: border-bottom-left-radius,
+          class: rounded-b-s,
+          values: (
+            null: $border-radius,
+            0: 0,
+            1: $border-radius-sm,
+            2: $border-radius,
+            3: $border-radius-lg,
+            4: $border-radius-xl,
+            5: $border-radius-xxl
+          )
+        ),
+        "rounded-bottom-end": (
+          property: border-bottom-right-radius,
+          class: rounded-b-e,
+          values: (
+            null: $border-radius,
+            0: 0,
+            1: $border-radius-sm,
+            2: $border-radius,
+            3: $border-radius-lg,
+            4: $border-radius-xl,
+            5: $border-radius-xxl
+          )
+        ),
     /* Amend text color to include states */
     "color": map-merge(
       map-get($utilities, "color"),

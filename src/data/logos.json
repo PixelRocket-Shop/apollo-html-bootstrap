@@ -1,0 +1,51 @@
+{
+   "entries": [{
+         "image": "{{webRoot}}/assets/images/logos/logo-1.svg",
+         "name": "Figma"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/logos/logo-2.svg",
+         "name": "Sketch"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/logos/logo-3.svg",
+         "name": "Adobe XD"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/logos/logo-4.svg",
+         "name": "Netlify"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/logos/logo-5.svg",
+         "name": "Dropbox"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/logos/logo-6.svg",
+         "name": "Gitlab"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/logos/logo-7.svg",
+         "name": "Click Up"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/logos/logo-8.svg",
+         "name": "Atlassian"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/logos/logo-9.svg",
+         "name": "Bitbucket"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/logos/logo-10.svg",
+         "name": "Photoshop"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/logos/logo-11.svg",
+         "name": "Illustrator"
+      },
+      {
+         "image": "{{webRoot}}/assets/images/logos/logo-12.svg",
+         "name": "Adobe CC"
+      }
+   ]
+}
