@@ -1,11 +1,11 @@
 # Apollo - Bootstrap 5 HTML Responsive Admin Template
 
 ## Overview
-Apollo is the perfect template to make your administration system a breeze to navigate and maintain. Clean, responsive, and easy-to-use, Apollo delivers a user experience that will help you create a successful interface. And above all, it's free!
+Apollo is a clean and minimal responsive Bootstrap 5 admin template.
 
 <strong><a href="https://apollo-html-bootstrap.vercel.app/">View Demo</a> | <a href="https://github.com/PixelRocket-Shop/apollo-html-bootstrap/archive/main.zip">Download ZIP</a></strong>
 
-![Bootstrap 5 Responsive HTML Admin Panel Template](https://pixelrocket-public-assets.s3.eu-west-2.amazonaws.com/github-assets/apollo-html/homepage.png "Apollo | Responsive Bootstrap 5 Admin Panel Template")
+![Bootstrap 5 Responsive HTML Admin Panel Template](https://pixelrocket-public-assets.s3.eu-west-2.amazonaws.com/github-assets/apollo-html/homepage-medium.png "Apollo | Responsive Bootstrap 5 Admin Panel Template")
 
 ## Table of contents
 
@@ -40,14 +40,26 @@ Most developers will be editing the source code and will also be running Webpack
 
 
 ## Template Pages
-The template consists of 6 pages:
+The template consists of the following pages:
 
 * Dashboard
+* User Management Page
+* Chart Example Page
 * Login Page
 * Register Page
 * Forgot Password Page
 * 404 Page
 * Blank Page
+
+As well as the following widgets:
+
+* User Settings Dropdown
+* User Activity Dropdown
+* User Messages Dropdown
+* User Notifications Dropdown
+* Various Chart.js Widgets
+* Visitors By Country
+* Visitors By OS System
 
 To keep code repetition to a minimum, we've used Handlebars.js as the templating engine and partials to quickly add the same code to different pages. We also use a Handlebars plugin for JSON data - this allows us to use loops and output a single HTML code block instead of repeating the same HTML.
 
